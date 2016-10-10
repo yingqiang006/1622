@@ -1,0 +1,174 @@
+
+body,div,ul,li,i,input,h2,p,span,button{
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+body{
+	color: #000;
+	font-size:11px;
+}
+ul,li{
+	list-style: none;
+}
+input,i,img,button{
+	border: none;
+}
+
+
+#floornav{
+	width: 32px;
+	position: fixed;
+	left: 10px;
+	top:150px;
+	border: 1px  solid #ddd;
+	display: none;
+}
+#floornav li{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	border-bottom:1px dotted #DDDDDD ;
+	font-size: 12px;
+	text-align:center;
+	line-height: 32px;
+	cursor:pointer;
+}
+#floornav li:hover span{
+	display: block;
+	background-color:#FD49AC;
+	color: #fff;
+}
+#floornav li.select span{
+	display: block;
+	background-color: #FD49AC;
+	color: #fff;
+}
+#floornav li span{
+	width: 32px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	display: none;
+}
+
+
+.nobanout {
+	width: 100%;
+	height: ;
+}
+.noban{
+	width: 1172px;
+	height: ;
+	margin: 0 auto;
+	
+}
+.noban h2{
+	font-weight:normal;
+	font-size: 24px;
+	line-height: 50px;
+	color: #000;
+	text-align: center;
+	font-family:  "宋体";
+	
+}
+.noban .noban-pic{
+	display: block;
+	width: 1172px;
+	height: 250px;
+	margin-bottom:10px ;
+	
+}
+
+
+.goods{
+	width: 1172px;
+	height: 10997px;
+	margin: 0 auto;
+}
+.noban-picll{
+	display: block;
+	width: 1172px;
+	height: 387px;
+	margin-bottom:10px ;
+	
+}
+.noban-picll img{
+	width: 100%;
+	height: 100%;
+}
+.goodsul {
+	width: 100%;
+	height: 10600px;
+}
+.goodsul li{
+	width: 350px;
+	height: 470px;
+	margin: 0 18px 60px;
+	float: left;
+	
+}
+.goodsul li:hover {
+	box-shadow:  0px 0px 10px #b2b2b2;
+	position: relative;
+}
+.goodsul li a{
+	display: block;
+	width: 270px;
+	height: 350px;
+	margin: 40px 40px 0;
+	cursor: pointer;
+	
+}
+.goodsul li img{
+	width:270px;
+	height: 270px;
+}
+.goodsul p{
+	font-size: 19px;
+	height: 20px;
+	color: #000;
+	margin-top: 11px;
+}
+.pricbox{
+	width: 350px;
+	height: 63px;
+	background: #fff5f9;
+	position: relative;
+	margin-top: 15px;
+	
+}
+.pricbox button{
+	width: 124px;
+	height: 63px;
+	background: #fd49ac;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 20px;
+	color: #fff;
+}
+.pric1{
+	color: #ff7e00;
+	font-size: 24px;
+	padding-left: 40px;
+	line-height: 63px;
+}
+.pric2{
+	font-size: 16px;
+	color:#beb7ba;
+	position: absolute;
+	top: 10px;
+	left: 138px;
+}
+.pric3{
+	font-size: 12px;
+	color: #fd81c1;
+	position: absolute;
+	top: 33px;
+	left: 138px;
+}
+

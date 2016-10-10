@@ -1,0 +1,270 @@
+.logoright{
+	width: 390px;
+	height: 51px;
+	float:right;
+}
+.logoright li{
+	float: left;
+	width: 130px;
+	height: 51px;
+	position: relative;
+	margin-top:27px ;
+}
+.logoright span{
+	width: 22px;
+	height: 22px;
+	position: relative;
+	z-index: 6;
+	margin: 5px 21px;
+	line-height: 22px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;;
+	display: inline-block;
+	text-align: center;
+	background-color: #ddd;
+	border-radius: 11px;
+}
+.logoright .sfirst{
+	background-color: #ff738f;
+}
+.logoright .dfirst{
+	color:#ff738f ;
+}
+.logoright div{
+	padding-left:15px;
+}
+.logoright i{
+	width: 145px;
+	height: 4px;
+	
+	display: inline-block;
+	background-color: #ddd;
+	position: absolute;
+	top: 14px;
+	left: -106px;
+	
+}
+
+.sc-containout{
+	width: 100%;
+	
+}
+.sc-contain{
+	width: 1172px;
+	margin: 0 auto;
+}
+.sc-con-top{
+	width: 1170px;
+	border: 1px solid #e5e5e5;
+}
+.sccttop {
+	width: 1170px;
+	height: 49px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.scctt1{
+	width: 443px;
+	height: 28px;
+	font-size: 14px;
+	color: #666;
+	line-height: 26px;
+	padding: 10px 10px 10px 15px;
+	float: left;
+}
+.scctt1 span{
+	
+	font-size:18px;
+	padding-right: 10px;
+	
+}
+
+.scctt2{
+	width: 155px;
+	height: 28px;
+	font-size: 14px;
+	color: #666;
+	line-height: 26px;
+	padding: 10px 10px 10px 10px;
+	float: left;
+	text-align: center;
+}
+
+.scctt3,.scctt4,.scctt5,.scctt6{
+	width: 97px;
+	height: 28px;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	color: #666;
+	line-height: 26px;
+	text-align: center;
+	float: left;
+}
+.scctcen{
+	width: 1170px;
+	height: ;
+}
+.scctcon{
+	width: 1170px;
+	height: 110px;
+	border-bottom:1px solid #e5e5e5;
+}
+.scctc1{
+	width: 468px;
+	height: 110px;
+	font-size: 14px;
+	color: #333333;
+	float: left;
+	position: relative;
+}
+.scctc1 .tcc1{
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	border:1px solid #e5e5e5;
+}
+.tcc1 img{
+	width: 100%;
+	height: 100%;
+}
+.scctc1 .tcc2{
+	display: block;
+	width: 334px;
+	height: 80px;
+	margin: 15px 8px 15px 126px;
+	font-size:14px ;
+	color: #333333;
+}
+.tcc2:hover{
+	color: #FF5073;
+}
+.scctc2{
+	width: 159px;
+	height: 80px;
+	padding: 15px 8px;
+	color: #333333;
+	text-align: center;
+	vertical-align: center;
+	float: left;
+	line-height: 80px;
+}
+.scctc3,.scctc4,.scctc5,.scctc6{
+	width: 101px;
+	height: 80px;
+	padding: 15px 8px;
+	color: #333333;
+	text-align: center;
+	vertical-align: center;
+	float: left;
+	line-height: 80px;
+}
+.tc41{
+	width: 78px;
+	height: 20px;
+	border:1px solid #e5e5e5;
+	margin-top:28px ;
+	margin-left: 10px;
+	overflow: hidden;
+	line-height: 20px;
+	
+}
+.scctc4 button{
+	width: 11px;
+	height: 18px;
+	padding: 1px;
+	background-color: #fff;
+	
+}
+.scctc4 input{
+	width: 34px;
+	height: 18px;
+	padding: 1px;
+	border-left:1px solid #e5e5e5;
+	border-right:1px solid #e5e5e5;
+	text-align: center;
+}
+.scctc6 {
+	height: 54px;
+	padding-top: 38px;
+	line-height: 17px;
+	
+}
+.scctc6 p:hover{
+	color: #FF5073;
+}
+
+.scctbon{
+	width: 1170px;
+	height: 52px;
+	
+}
+.stb{
+	width:px;
+	height: 22px;
+	float: right;
+	padding: 15px 30px;
+}
+.stbs1{
+	display: inline-block;
+	font-size: 14px;
+	color: #666;
+}
+.stbs2{
+	display: inline-block;
+	font-size: 20px;
+	color: #FF5073;
+}
+
+
+.sc-con-bot{
+	width: 1172px;
+	height: 62px;
+	margin:100px  0 30px;
+	position: relative;
+}
+.sclast{
+	width: 1172px;
+	height: 60px;
+	position: fixed;
+	bottom: 0;
+	background-color: #f5f5f5;
+	border:1px solid #e5e5e5;
+}
+
+.sclast1{
+	width: px;
+	height: 30px;
+	float: right;
+	font-size: 14px;
+	padding: 15px 20px;
+	
+}
+.sclast1 span{
+	display: inline-block;
+	color: #666;
+	
+}
+.sclast1 .zongjia{
+	color: #FF5073;
+	display: inline-block;
+	font-size: 28px;
+	line-height: 30px;
+}
+
+.jijia{
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	padding: 15px 20px;
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #FF5073;
+	
+}

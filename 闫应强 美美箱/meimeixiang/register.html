@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/equal.css" />
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="logoint">
+			<div class="lologo">
+				<a href="index.html">
+					<img src="img/logo (2).png"  />
+				</a>
+			</div>
+		</div>
+		<div class="contain">
+			<div class="loginrig">
+				<div class="loginrt">
+					<p class="biaoti">注册MEMEBOX账号</p>
+					<a href="login.html">立即登录>></a>
+					<div class="kongbai"></div>
+					<form>
+						<input type="text" class="" id="phonenum" name="" value="" placeholder="请输入有效手机号"  />
+						<input type="password" class="" id="pass" value="" placeholder="请输入6~16位密码" />
+						<input type="text" class="yanma" id="shuyan" value="" placeholder="请输入验证码" />
+						<span class="yanzheng" id="yanz">发送验证码</span>
+						<button type="button" id="refis">注册</button>
+						<!--<input type="button" name="" id="refis" value="zhuc" />-->
+						<p class="tongyi">注册即表示您已同意<span class="xieyi">美美箱用户协议</span></p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="lasttout">
+			<div class="ldiv"><img src="img/genuine.png" /><div>100%正品</div></div>
+			<div class="ldiv"><img src="img/low.png" /><div>优质低价</div></div>
+			<div class="ldiv"><img src="img/deliver.png" /><div>极速发货</div></div>
+			<div class="ldiv"><img src="img/refund.png" /><div>退换无忧</div></div>
+		</div>
+		<div class="lastout">
+			<div class="lastleft">
+				<div class="lasl1">
+					<img src="img/szj.jpg" />
+				</div>
+				<p>关于我们</p>
+				<div class="guanyu">
+					<div class="guanyu1">
+						<img class="meme m2" src="img/meme.png"  />
+						<img class="memeout" src="img/download.png"  />
+					</div>
+					<div class="guanyu2">
+						<img class="meme m2" src="img/wechat.png"  />
+						<img class="memeout" src="img/wechatdownload.png"  />
+					</div>
+					<div class="guanyu3">
+						<img class="meme m2" src="img/sina.png"  />
+						<img class="memeout" src="img/sinadownload.png"  />
+					</div>
+				</div>
+			</div>
+			<div class="lastright">
+				<ul class="lr-ul">
+					<li class="lru-f">关于美美箱</li>
+					<li ><a href="#">美美全球</a></li>
+					<li ><a href="#">品牌优势</a></li>
+					<li ><a href="#">消费保障</a></li>
+				</ul>
+				<ul class="lr-ul">
+					<li class="lru-f">帮助中心</li>
+					<li ><a href="#">常见问题</a></li>
+					<li ><a href="#">账户相关</a></li>
+					<li ><a href="#">包邮政策</a></li>
+					<li ><a href="#">支付相关</a></li>
+					<li ><a href="#">物流相关</a></li>
+					<li ><a href="#">退换政策</a></li>
+				</ul>
+				<ul class="lr-ul">
+					<li class="lru-f">服务协议</li>
+					<li ><a href="#">服务协议</a></li>
+					<li ><a href="#">个人网申协议</a></li>
+					
+				</ul>
+				<ul class="lr-ul">
+					<li class="lru-f">联系我们</li>
+					<li ><a href="#">商务合作</a></li>
+					<li ><a href="#">分销合作</a></li>
+					<li ><a href="#">加入我们</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div class="lianxi">
+			<h2>联系客服</h2>
+			<p>
+				<span>客服时间：周一~周日(9:00 - 21:00)</span>
+				<span>客服热线：400-720-9967</span>
+				<span>客服邮箱：kf@memeboxglobal.com</span>
+			</p>
+		</div>
+		<div class="lbottom">
+			<p class="lbp1">&copy;2015 Memebox Corporation. All Rights Reserved.</p>
+			<p class="lbp2">
+				<img src="img/icon.gif" />
+				<span>
+					蜜米柏斯克(上海)商贸有限公司 上海市杨浦区政立路415号中航天盛广场A座6楼 沪ICP备14043341号
+			</span></p>
+		</div>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/CookieUtil.js"></script>
+		<script src="js/handlebars.min.js"></script>
+		<script src="js/picCarou.js"></script>
+		
+		<script>
+			$(function() {
+				var $phonenum = $("#phonenum");
+				var $pass = $("#pass");
+				var $shuyan = $("#shuyan");
+				//判断手机号码是否符合规范
+				$phonenum.blur(function(){
+					var phValue = $phonenum.val();
+					var reg = /^\d{11}$/;
+					if(reg.test(phValue)){
+						
+						return true;
+					} else {
+						$phonenum.val("");
+						$phonenum.attr({placeholder:"您输入的手机号有误" });
+						return false;
+					}
+				});
+				//判断密码是否符合规范
+				$pass.blur(function() {
+					var passVal = $pass.val();
+					var reg = /\S{6,16}/;
+					console.log(passVal);
+					console.log(reg);
+					if(reg.test(passVal)){
+						
+						return true;
+					} else {
+						$pass.val("");
+						$pass.attr({placeholder: "密码位数不对，请重新输入"});
+						return false;
+					}
+				});
+				//获取手机验证码
+				$("#yanz").click(function(){
+					$.ajax({
+						type:"post",
+						url:"http://10000phone.applinzi.com/HQNews/user/getCode.php",
+						async:true,
+						dataType:"json",
+						data: {tel: $phonenum.val()},
+						success: function(data) {
+							console.log(typeof data);
+							if(data.code == 200){
+								$shuyan.val(data.data.randomcode);
+							}else {
+								alert("换个手机号试试");
+							}
+							
+						},
+						error: function() {
+							
+						}
+					});
+				});
+				$("#refis").click(function(){
+					//console.log($phonenum.val());
+					//console.log($pass.val());
+					$.ajax({
+						type:"post",
+						url:"http://10000phone.applinzi.com/HQNews/user/userregister.php",
+						async:true,
+						data:{username: $phonenum.val(), password:$pass.val()},
+						dataType: "json",
+						success: function(data){
+							
+							//console.log(data);
+							if(data.code == 200) {
+								console.log(data);
+								alert("注册成功");
+							} else {
+								console.log("ll__"+ data);
+								alert(data.data.msg);
+							}
+						},
+						error: function(msg) {
+							
+							console.log("error-->"+msg);
+							
+						}
+					});
+					/*var paramStr = null;
+					paramStr += "username=" + $phonenum.val();
+					paramStr += "&password=" + $pass.val();
+					var url = "http://10000phone.applinzi.com/HQNews/user/userregister.php";
+					$.get(url,paramStr,function(data){
+						console.log(data);
+					});*/
+				});
+				
+			});
+		</script>
+		<script>
+			$(function () {
+				var $flnavs = $("#floornav li");
+				var $goods = $(".nobanout .goods");
+				var $noban = $(".nobanout .noban");
+				var ifNeed = true;
+				
+				//滚动出现回到顶部图标
+				$(window).scroll(function() {
+					var st = $(window).scrollTop();
+					if(st > 200) {
+						$("#totop").css({display: "block"});
+					} else{
+						$("#totop").css({display: "none"});
+					}
+					if(st > 500) {
+						$("#floornav").css({display: "block"});
+					}else {
+						$("#floornav").css({display: "none"});
+					}
+					
+					/*if(ifNeed == true) {
+						for(var i = 0; i<4; i++) {
+							var boundValue = $goods.eq(i).offset().top - 200;
+							if(st < boundValue) {
+								
+									$flnavs.eq(i).addClass("select").siblings().removeClass("select");
+			
+								
+								break;
+							}
+						}
+					}*/
+				});
+				//回到顶部
+				$("#totop").click(function(){
+					$("body, html").animate({scrollTop: 0});
+				});
+				
+				//右部条形栏动画
+				$(".meifix li").mouseenter(function() {
+					$(this).find(".cangout").stop(true).css({right: 80,display:"block"}).animate({right:40});
+				}).mouseleave(function(){
+					$(this).find(".cangout").stop(true).css({display: "none"});
+				});
+				$("#cartsh").click(function() {
+					if($(".shop").css("display") == "block"){
+						
+					} else {
+						$(".shop").stop(true).css({left: 0,display:"block"}).animate({left: -285});
+					}
+						
+					
+				});
+				$("#shopclose").click(function() {
+						$(".shop").stop(true).animate({left: 0},function() {
+							$(this).css({display: "none"});
+						});
+				})
+				//每日签到
+				$("#daywr").click(function() {
+					$(".zhezhao").css({display: "block"});
+					$(".qiandao").css({display: "block"});
+					$(".shop").css({display: "none"});
+				});
+				$("#close").click(function() {
+					$(".zhezhao").css({display: "none"});
+					$(".qiandao").css({display: "none"});
+				});
+				//楼梯效果
+				
+ 				$flnavs.click(function(){
+ 					ifNeed = false;
+					var index = $(this).index();
+					var ot;
+					if(index == 0) {
+						ot = $noban.offset().top;
+					} else {
+						ot = $goods.eq(index-1).offset().top;
+					}
+					$("body, html").stop(true).animate({scrollTop: ot},function(){
+						ifNeed = true
+					});
+					$(this).addClass("select").siblings().removeClass("select");
+				});
+				
+				
+				//关于我们 点击事件
+		  		$(".guanyu").find(".meme").mouseenter(function() {
+					
+					var index = $(this).index(".meme");
+					
+					$(".guanyu .memeout").eq(index).css({display: "block"});
+				}).mouseleave(function() {
+					var index = $(this).index(".meme");
+					$(".guanyu .memeout").eq(index).css({display: "none"});
+				});
+				//宋仲基点击下载
+				$(".szjload").click(function(){
+					$(".szjp2").css({display: "block"});
+					$(".szjclose").css({display: "block"});
+					
+				});
+				$(".szjclose").click(function(){
+					$(".szjp2").css({display: "none"});
+					$(".szjclose").css({display: "none"});
+				});
+				
+				
+				
+				
+			});
+		</script>
+	</body>
+</html>
